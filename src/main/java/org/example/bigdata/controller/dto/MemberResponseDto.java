@@ -1,4 +1,4 @@
-package org.example.bigdata.dto;
+package org.example.bigdata.controller.dto;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

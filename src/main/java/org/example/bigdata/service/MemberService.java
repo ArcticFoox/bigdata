@@ -4,9 +4,10 @@ import lombok.RequiredArgsConstructor;
 import org.example.bigdata.domain.Member;
 import org.example.bigdata.domain.MemberMapper;
 import org.example.bigdata.domain.MemberRepository;
-import org.example.bigdata.dto.MemberRequestDto;
-import org.example.bigdata.dto.MemberResponseDto;
-import org.example.bigdata.dto.MemberUpdateDto;
+import org.example.bigdata.controller.dto.MemberRequestDto;
+import org.example.bigdata.controller.dto.MemberResponseDto;
+import org.example.bigdata.controller.dto.MemberUpdateDto;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
