@@ -7,7 +7,7 @@ import org.mapstruct.factory.Mappers;
 
 @Mapper(componentModel = "spring")
 public interface MemberMapper {
-//    MemberMapper INSTANCE = Mappers.getMapper(MemberMapper.class);
+    MemberMapper INSTANCE = Mappers.getMapper(MemberMapper.class);
     MemberResponseDto memberToMemberResponseDto(Member member);
     Member memberRequestDtoToMember(MemberRequestDto memberRequestDto);
 }
