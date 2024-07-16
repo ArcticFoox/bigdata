@@ -1,9 +1,7 @@
 spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3307/bigdata?serverTimezone=Asia/Seoul&useUnicode=true&characterEncoding=UTF-8
-    username: root
-    password: 1234
+  profiles:
+    include:
+      dev
 
   jpa:
     hibernate:
