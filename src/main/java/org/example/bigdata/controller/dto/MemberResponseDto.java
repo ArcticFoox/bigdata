@@ -2,9 +2,11 @@ package org.example.bigdata.controller.dto;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.example.bigdata.domain.Member;
 
 @Getter
+@Setter
 @NoArgsConstructor
 public class MemberResponseDto {
     private Long id;

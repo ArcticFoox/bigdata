@@ -29,14 +29,23 @@ public class MemberService {
 
     @Transactional
     public MemberResponseDto findByName(String name){
-        Optional<Member> member = memberRepository.findByName(name);
-        //예외처리 변환 해야함
-        return memberMapper.memberToMemberResponseDto(member.orElseThrow());
+        Member member = memberRepository.findByName(name).orElseThrow(() ->
+                new IllegalArgumentException("존재하지 않는 멤버입니다."));
+
+        return memberMapper.memberToMemberResponseDto(member);
+    }
+
+    @Transactional
+    public MemberResponseDto findById(Long id){
+        Member member = memberRepository.findById(id).orElseThrow(() ->
+                new IllegalArgumentException("존재하지 않는 멤버입니다."));
+
+        return memberMapper.memberToMemberResponseDto(member);
     }
 
     @Transactional
     public List<MemberResponseDto> findAll(){
-        //이 부분 예외처리에 대해 질문
+
         return memberRepository.findAll().stream()
                 .map(MemberResponseDto::new)
                 .collect(Collectors.toList());
